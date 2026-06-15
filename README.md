@@ -9,3 +9,18 @@ A collection of SQL exercises, datasets, and solutions designed to improve datab
 - Work with realistic relational datasets
 - Master joins, aggregations, and subqueries
 - Build a public portfolio of SQL projects and exercises
+
+---
+
+## Repository Structure
+
+```text
+sql/
+│
+├── README.md
+│
+└── datasets/
+    └── ecommerce/
+        ├── schema.sql
+        ├── data.sql
+        └── exercise.sql
