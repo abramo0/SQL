@@ -74,7 +74,7 @@ To run this project locally, you need to import the SQL files into your database
 Make sure you have MySQL installed.
 
 ### 1. Clone the repository
-git clone https://github.com/abramo0/databases.git
+git clone https://github.com/abramo0/databases
 
 ### 2. Navigate to the project folder
 cd databases/ecommerce
