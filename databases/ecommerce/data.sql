@@ -25,7 +25,7 @@ INSERT INTO products (id, name, price) VALUES
 (10, 'Smartphone', 699.99);
 
 -- ORDERS
-INSERT INTO orders (id, client_id, product_id, quantity, date_order) VALUES
+INSERT INTO orders (id, client_id, product_id, quantity, order_date) VALUES
 (1, 1, 1, 1, '2025-01-10'),
 (2, 1, 2, 2, '2025-01-10'),
 (3, 2, 4, 1, '2025-01-15'),
