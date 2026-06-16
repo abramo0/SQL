@@ -1,26 +1,26 @@
 -- CLIENTS
 INSERT INTO clients (id, name, surname, email, city) VALUES
-(1, 'Mario', 'Rossi', 'mario.rossi@email.com', 'Milano'),
-(2, 'Luca', 'Bianchi', 'luca.bianchi@email.com', 'Roma'),
-(3, 'Anna', 'Verdi', 'anna.verdi@email.com', 'Torino'),
-(4, 'Giulia', 'Neri', 'giulia.neri@email.com', 'Napoli'),
-(5, 'Marco', 'Ferrari', 'marco.ferrari@email.com', 'Milano'),
-(6, 'Sara', 'Gallo', 'sara.gallo@email.com', 'Bologna'),
-(7, 'Paolo', 'Conti', 'paolo.conti@email.com', 'Firenze'),
-(8, 'Elena', 'Ricci', 'elena.ricci@email.com', 'Roma'),
-(9, 'Davide', 'Greco', 'davide.greco@email.com', 'Genova'),
-(10, 'Chiara', 'Moretti', 'chiara.moretti@email.com', 'Verona');
+(1, 'John', 'Smith', 'john.smith@email.com', 'London'),
+(2, 'Michael', 'Johnson', 'michael.johnson@email.com', 'New York'),
+(3, 'Emma', 'Brown', 'emma.brown@email.com', 'Chicago'),
+(4, 'Sophia', 'Davis', 'sophia.davis@email.com', 'Los Angeles'),
+(5, 'James', 'Wilson', 'james.wilson@email.com', 'London'),
+(6, 'Olivia', 'Taylor', 'olivia.taylor@email.com', 'Boston'),
+(7, 'Daniel', 'Anderson', 'daniel.anderson@email.com', 'Seattle'),
+(8, 'Emily', 'Thomas', 'emily.thomas@email.com', 'New York'),
+(9, 'William', 'Jackson', 'william.jackson@email.com', 'Miami'),
+(10, 'Charlotte', 'White', 'charlotte.white@email.com', 'San Francisco');
 
 -- PRODUCTS
 INSERT INTO products (id, name, price) VALUES
 (1, 'Laptop', 899.99),
 (2, 'Mouse', 25.50),
-(3, 'Tastiera', 49.90),
+(3, 'Keyboard', 49.90),
 (4, 'Monitor', 199.99),
-(5, 'Stampante', 129.99),
+(5, 'Printer', 129.99),
 (6, 'Webcam', 59.99),
 (7, 'SSD 1TB', 89.99),
-(8, 'Cuffie', 79.90),
+(8, 'Headphones', 79.90),
 (9, 'Tablet', 299.99),
 (10, 'Smartphone', 699.99);
 
@@ -46,3 +46,4 @@ INSERT INTO orders (id, client_id, product_id, quantity, order_date) VALUES
 (18, 8, 3, 2, '2025-03-22'),
 (19, 9, 5, 1, '2025-03-25'),
 (20, 10, 9, 1, '2025-03-28');
+```
