@@ -17,7 +17,7 @@ CREATE TABLE orders (
     client_id INT,
     product_id INT,
     quantity INT,
-    date_order DATE,
+    order_date DATE,
 
     FOREIGN KEY (client_id)
         REFERENCES clients(id),
