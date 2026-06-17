@@ -58,7 +58,7 @@ The database consists of three tables:
 | client_id   | INT (Foreign Key → clients.id) |
 | product_id  | INT (Foreign Key → products.id) |
 | quantity    | INT |
-| date_order  | DATE |
+| order_date  | DATE |
 
 
 ### Relationships
