@@ -83,188 +83,21 @@ WHERE city = 'London';
 
 ---
 
-## Exercise 7 - Find clients living in New York
+## Exercise 7 - Find clients who do not live in London
 
-**Question:** Which clients live in New York?
+**Question:** Which clients live outside London?
 
 ### Solution
 
 ```sql
 SELECT *
 FROM clients
-WHERE city = 'New York';
+WHERE city <> 'London';
 ```
 
 ---
 
-## Exercise 8 - Show products costing more than €100
-
-**Question:** Which products cost more than €100?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-WHERE price > 100;
-```
-
----
-
-## Exercise 9 - Show products costing less than €100
-
-**Question:** Which products cost less than €100?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-WHERE price < 100;
-```
-
----
-
-## Exercise 10 - Find products priced between €50 and €200
-
-**Question:** Which products have a price between €50 and €200?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-WHERE price BETWEEN 50 AND 200;
-```
-
----
-
-## Exercise 11 - Sort products by price (lowest first)
-
-**Question:** Which products are the cheapest?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-ORDER BY price ASC;
-```
-
----
-
-## Exercise 12 - Sort products by price (highest first)
-
-**Question:** Which products are the most expensive?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-ORDER BY price DESC;
-```
-
----
-
-## Exercise 13 - Display the 3 most expensive products
-
-**Question:** What are the three most expensive products?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-ORDER BY price DESC
-LIMIT 3;
-```
-
----
-
-## Exercise 14 - Count all clients
-
-**Question:** How many clients are registered in the database?
-
-### Solution
-
-```sql
-SELECT COUNT(*) AS total_clients
-FROM clients;
-```
-
----
-
-## Exercise 15 - Find the most expensive product
-
-**Question:** Which product has the highest price?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-ORDER BY price DESC
-LIMIT 1;
-```
-
----
-
-## Exercise 16 - Show all unique cities
-
-**Question:** In which cities do clients live?
-
-### Solution
-
-```sql
-SELECT DISTINCT city
-FROM clients;
-```
-
----
-
-## Exercise 17 - Count the number of different cities
-
-**Question:** How many different cities are represented in the client database?
-
-### Solution
-
-```sql
-SELECT COUNT(DISTINCT city) AS total_cities
-FROM clients;
-```
-
----
-
-## Exercise 18 - Find products cheaper than €50
-
-**Question:** Which products cost less than €50?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-WHERE price < 50;
-```
-
----
-
-## Exercise 19 - Find products costing at least €100
-
-**Question:** Which products cost €100 or more?
-
-### Solution
-
-```sql
-SELECT *
-FROM products
-WHERE price >= 100;
-```
-
----
-
-## Exercise 20 - Find clients who live in London or New York
+## Exercise 8 - Find clients who live in London or New York
 
 **Question:** Which clients live in London or New York?
 
@@ -279,21 +112,9 @@ WHERE city = 'London'
 
 ---
 
-## Exercise 21 - Find clients who do not live in London
 
-**Question:** Which clients live outside London?
 
-### Solution
-
-```sql
-SELECT *
-FROM clients
-WHERE city <> 'London';
-```
-
----
-
-## Exercise 22 - Find clients living in a list of cities
+## Exercise 9 - Find clients living in a list of cities
 
 **Question:** Which clients live in London, New York, or Boston?
 
@@ -305,9 +126,53 @@ FROM clients
 WHERE city IN ('London', 'New York', 'Boston');
 ```
 
+
 ---
 
-## Exercise 23 - Find products that are not between €50 and €200
+## Exercise 10 - Show products costing more than €100
+
+**Question:** Which products cost more than €100?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price > 100;
+```
+
+---
+
+## Exercise 11 - Show products costing less than €100
+
+**Question:** Which products cost less than €100?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price < 100;
+```
+
+---
+
+## Exercise 12 - Find products priced between €50 and €200
+
+**Question:** Which products have a price between €50 and €200?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price BETWEEN 50 AND 200;
+```
+
+---
+
+
+## Exercise 13 - Find products that are not between €50 and €200
 
 **Question:** Which products cost less than €50 or more than €200?
 
@@ -321,7 +186,104 @@ WHERE price NOT BETWEEN 50 AND 200;
 
 ---
 
-## Exercise 24 - Find clients whose name starts with 'J'
+## Exercise 14 - Sort products by price (lowest first)
+
+**Question:** Which products are the cheapest?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price ASC;
+```
+
+---
+
+## Exercise 15 - Sort products by price (highest first)
+
+**Question:** Which products are the most expensive?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price DESC;
+```
+
+---
+
+## Exercise 16 - Display the 3 most expensive products
+
+**Question:** What are the three most expensive products?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 3;
+```
+
+---
+
+## Exercise 17 - Count all clients
+
+**Question:** How many clients are registered in the database?
+
+### Solution
+
+```sql
+SELECT COUNT(*) AS total_clients
+FROM clients;
+```
+
+---
+
+## Exercise 18 - Find the most expensive product
+
+**Question:** Which product has the highest price?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 1;
+```
+
+---
+
+## Exercise 19 - Show all unique cities
+
+**Question:** In which cities do clients live?
+
+### Solution
+
+```sql
+SELECT DISTINCT city
+FROM clients;
+```
+
+---
+
+## Exercise 20 - Count the number of different cities
+
+**Question:** How many different cities are represented in the client database?
+
+### Solution
+
+```sql
+SELECT COUNT(DISTINCT city) AS total_cities
+FROM clients;
+```
+
+---
+
+## Exercise 21 - Find clients whose name starts with 'J'
 
 **Question:** Which clients have a first name starting with the letter J?
 
@@ -335,7 +297,7 @@ WHERE name LIKE 'J%';
 
 ---
 
-## Exercise 25 - Find clients whose surname ends with 'n'
+## Exercise 22 - Find clients whose surname ends with 'n'
 
 **Question:** Which clients have a surname ending with the letter 'n'?
 
@@ -349,7 +311,7 @@ WHERE surname LIKE '%n';
 
 ---
 
-## Exercise 26 - Find products containing the word 'phone'
+## Exercise 23 - Find products containing the word 'phone'
 
 **Question:** Which products contain the word 'phone' in their name?
 
@@ -363,7 +325,7 @@ WHERE name LIKE '%phone%';
 
 ---
 
-## Exercise 27 - Show the cheapest product
+## Exercise 24 - Show the cheapest product
 
 **Question:** Which product has the lowest price?
 
@@ -378,7 +340,7 @@ LIMIT 1;
 
 ---
 
-## Exercise 28 - Find the average product price
+## Exercise 25 - Find the average product price
 
 **Question:** What is the average price of all products?
 
@@ -391,7 +353,7 @@ FROM products;
 
 ---
 
-## Exercise 29 - Find the highest product price
+## Exercise 26 - Find the highest product price
 
 **Question:** What is the highest product price?
 
@@ -404,7 +366,7 @@ FROM products;
 
 ---
 
-## Exercise 30 - Find the lowest product price
+## Exercise 27 - Find the lowest product price
 
 **Question:** What is the lowest product price?
 
@@ -417,7 +379,7 @@ FROM products;
 
 ---
 
-## Exercise 31 - Calculate the total value of all products
+## Exercise 28 - Calculate the total value of all products
 
 **Question:** What is the sum of all product prices?
 
@@ -430,7 +392,7 @@ FROM products;
 
 ---
 
-## Exercise 32 - Count the number of products
+## Exercise 29 - Count the number of products
 
 **Question:** How many products are available in the store?
 
@@ -443,7 +405,7 @@ FROM products;
 
 ---
 
-## Exercise 33 - Display the 5 cheapest products
+## Exercise 30 - Display the 5 cheapest products
 
 **Question:** What are the five cheapest products?
 
@@ -458,7 +420,7 @@ LIMIT 5;
 
 ---
 
-## Exercise 34 - Display the 5 most expensive products
+## Exercise 31 - Display the 5 most expensive products
 
 **Question:** What are the five most expensive products?
 
