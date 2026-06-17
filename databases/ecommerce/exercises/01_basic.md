@@ -207,3 +207,266 @@ FROM products
 ORDER BY price DESC
 LIMIT 1;
 ```
+
+---
+
+## Exercise 16 - Show all unique cities
+
+**Question:** In which cities do clients live?
+
+### Solution
+
+```sql
+SELECT DISTINCT city
+FROM clients;
+```
+
+---
+
+## Exercise 17 - Count the number of different cities
+
+**Question:** How many different cities are represented in the client database?
+
+### Solution
+
+```sql
+SELECT COUNT(DISTINCT city) AS total_cities
+FROM clients;
+```
+
+---
+
+## Exercise 18 - Find products cheaper than €50
+
+**Question:** Which products cost less than €50?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price < 50;
+```
+
+---
+
+## Exercise 19 - Find products costing at least €100
+
+**Question:** Which products cost €100 or more?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price >= 100;
+```
+
+---
+
+## Exercise 20 - Find clients who live in London or New York
+
+**Question:** Which clients live in London or New York?
+
+### Solution
+
+```sql
+SELECT *
+FROM clients
+WHERE city = 'London'
+   OR city = 'New York';
+```
+
+---
+
+## Exercise 21 - Find clients who do not live in London
+
+**Question:** Which clients live outside London?
+
+### Solution
+
+```sql
+SELECT *
+FROM clients
+WHERE city <> 'London';
+```
+
+---
+
+## Exercise 22 - Find clients living in a list of cities
+
+**Question:** Which clients live in London, New York, or Boston?
+
+### Solution
+
+```sql
+SELECT *
+FROM clients
+WHERE city IN ('London', 'New York', 'Boston');
+```
+
+---
+
+## Exercise 23 - Find products that are not between €50 and €200
+
+**Question:** Which products cost less than €50 or more than €200?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE price NOT BETWEEN 50 AND 200;
+```
+
+---
+
+## Exercise 24 - Find clients whose name starts with 'J'
+
+**Question:** Which clients have a first name starting with the letter J?
+
+### Solution
+
+```sql
+SELECT *
+FROM clients
+WHERE name LIKE 'J%';
+```
+
+---
+
+## Exercise 25 - Find clients whose surname ends with 'n'
+
+**Question:** Which clients have a surname ending with the letter 'n'?
+
+### Solution
+
+```sql
+SELECT *
+FROM clients
+WHERE surname LIKE '%n';
+```
+
+---
+
+## Exercise 26 - Find products containing the word 'phone'
+
+**Question:** Which products contain the word 'phone' in their name?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+WHERE name LIKE '%phone%';
+```
+
+---
+
+## Exercise 27 - Show the cheapest product
+
+**Question:** Which product has the lowest price?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price ASC
+LIMIT 1;
+```
+
+---
+
+## Exercise 28 - Find the average product price
+
+**Question:** What is the average price of all products?
+
+### Solution
+
+```sql
+SELECT AVG(price) AS average_price
+FROM products;
+```
+
+---
+
+## Exercise 29 - Find the highest product price
+
+**Question:** What is the highest product price?
+
+### Solution
+
+```sql
+SELECT MAX(price) AS highest_price
+FROM products;
+```
+
+---
+
+## Exercise 30 - Find the lowest product price
+
+**Question:** What is the lowest product price?
+
+### Solution
+
+```sql
+SELECT MIN(price) AS lowest_price
+FROM products;
+```
+
+---
+
+## Exercise 31 - Calculate the total value of all products
+
+**Question:** What is the sum of all product prices?
+
+### Solution
+
+```sql
+SELECT SUM(price) AS total_value
+FROM products;
+```
+
+---
+
+## Exercise 32 - Count the number of products
+
+**Question:** How many products are available in the store?
+
+### Solution
+
+```sql
+SELECT COUNT(*) AS total_products
+FROM products;
+```
+
+---
+
+## Exercise 33 - Display the 5 cheapest products
+
+**Question:** What are the five cheapest products?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price ASC
+LIMIT 5;
+```
+
+---
+
+## Exercise 34 - Display the 5 most expensive products
+
+**Question:** What are the five most expensive products?
+
+### Solution
+
+```sql
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 5;
+```
