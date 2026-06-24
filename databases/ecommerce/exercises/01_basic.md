@@ -535,6 +535,8 @@ GROUP BY c.id;
 
 ## Exercise 43 - Clients spending > 1000
 
+**Question:** Which clients have spent more than 1000 in total?
+
 ### Solution
 ```sql
 SELECT c.name,
@@ -550,6 +552,8 @@ HAVING SUM(p.price * o.quantity) > 1000;
 
 ## Exercise 44 - Best selling product
 
+**Question:** Which product has been sold the most?
+
 ### Solution
 ```sql
 SELECT p.name, SUM(o.quantity) AS total_sold
@@ -564,6 +568,8 @@ LIMIT 1;
 
 ## Exercise 45 - Products never ordered
 
+**Question:** Which products have never been ordered?
+
 ### Solution
 ```sql
 SELECT p.*
@@ -575,6 +581,8 @@ WHERE o.product_id IS NULL;
 ---
 
 ## Exercise 46 - Most active client
+
+**Question:** Who is the most active client based on the total number of orders made?
 
 ### Solution
 ```sql
@@ -590,6 +598,8 @@ LIMIT 1;
 
 ## Exercise 47 - Clients with orders
 
+**Question:** Which clients have placed at least one order?
+
 ### Solution
 ```sql
 SELECT *
@@ -602,6 +612,8 @@ WHERE EXISTS (
 ---
 
 ## Exercise 48 - Clients without orders
+
+**Question:** Which clients have never placed an order?
 
 ### Solution
 ```sql
@@ -616,6 +628,8 @@ WHERE NOT EXISTS (
 
 ## Exercise 49 - Products ordered
 
+**Question:** Which products have been ordered at least once?
+
 ### Solution
 ```sql
 SELECT *
@@ -627,6 +641,8 @@ WHERE id IN (SELECT product_id FROM orders);
 
 ## Exercise 50 - Products never ordered
 
+**Question:** Which products have never been ordered?
+
 ### Solution
 ```sql
 SELECT *
@@ -637,6 +653,8 @@ WHERE id NOT IN (SELECT product_id FROM orders);
 ---
 
 ## Exercise 51 - Clients who bought product 1
+
+**Question:** Which clients have bought product 1?
 
 ### Solution
 ```sql
