@@ -321,6 +321,8 @@ FROM products;
 
 ## Exercise 26 - Max price
 
+**Question:** Highest product price?
+
 ### Solution
 ```sql
 SELECT MAX(price) AS highest_price
@@ -330,6 +332,8 @@ FROM products;
 ---
 
 ## Exercise 27 - Min price
+
+**Question:** Lowest product price?
 
 ### Solution
 ```sql
@@ -341,6 +345,8 @@ FROM products;
 
 ## Exercise 28 - Total value
 
+**Question:** What is the total value of all product prices?
+
 ### Solution
 ```sql
 SELECT SUM(price) AS total_value
@@ -351,6 +357,8 @@ FROM products;
 
 ## Exercise 29 - Count products
 
+**Question:** How many products are there in total?
+
 ### Solution
 ```sql
 SELECT COUNT(*) AS total_products
@@ -360,6 +368,8 @@ FROM products;
 ---
 
 ## Exercise 30 - 5 cheapest
+
+**Question:** What are the 5 cheapest products?
 
 ### Solution
 ```sql
@@ -372,6 +382,8 @@ LIMIT 5;
 ---
 
 ## Exercise 31 - 5 most expensive
+
+**Question:** What are the 5 most expensive products?
 
 ### Solution
 ```sql
@@ -668,6 +680,8 @@ WHERE o.product_id = 1;
 
 ## Exercise 52 - Above average products
 
+**Question:** Which products have a price above the average product price?
+
 ### Solution
 ```sql
 SELECT *
@@ -678,6 +692,8 @@ WHERE price > (SELECT AVG(price) FROM products);
 ---
 
 ## Exercise 53 - Max per category
+
+**Question:** Which products have the highest price in each category?
 
 ### Solution
 ```sql
@@ -694,6 +710,8 @@ WHERE price = (
 
 ## Exercise 54 - Categories > 500
 
+**Question:** Which product categories have at least one product with a price greater than 500?
+
 ### Solution
 ```sql
 SELECT DISTINCT category
@@ -705,6 +723,8 @@ WHERE price > 500;
 
 ## Exercise 55 - CASE price
 
+**Question:** How can products be categorized as Cheap, Medium, or Expensive based on their price?
+
 ### Solution
 ```sql
 SELECT name, price,
@@ -712,7 +732,7 @@ CASE
   WHEN price < 50 THEN 'Cheap'
   WHEN price BETWEEN 50 AND 200 THEN 'Medium'
   ELSE 'Expensive'
-END
+END AS price_category
 FROM products;
 ```
 
@@ -720,16 +740,23 @@ FROM products;
 
 ## Exercise 56 - Flag expensive
 
+**Question:** Which products have a price greater than 100?
+
 ### Solution
 ```sql
 SELECT name, price,
-CASE WHEN price > 100 THEN 'YES' ELSE 'NO' END
+CASE
+  WHEN price > 100 THEN 'YES'
+  ELSE 'NO'
+END AS result
 FROM products;
 ```
 
 ---
 
 ## Exercise 57 - Client status
+
+**Question:** How can clients be classified as Inactive, Regular, or VIP based on the number of orders?
 
 ### Solution
 ```sql
@@ -748,6 +775,8 @@ GROUP BY c.id;
 
 ## Exercise 58 - Orders 2025
 
+**Question:** Which orders were placed in the year 2025?
+
 ### Solution
 ```sql
 SELECT *
@@ -758,6 +787,8 @@ WHERE YEAR(order_date) = 2025;
 ---
 
 ## Exercise 59 - Last 30 days
+
+**Question:** Which orders were placed in the last 30 days?
 
 ### Solution
 ```sql
@@ -770,6 +801,8 @@ WHERE order_date >= CURRENT_DATE - INTERVAL 30 DAY;
 
 ## Exercise 60 - Monthly orders
 
+**Question:** How many orders are placed each month?
+
 ### Solution
 ```sql
 SELECT MONTH(order_date), COUNT(*)
@@ -780,6 +813,8 @@ GROUP BY MONTH(order_date);
 ---
 
 ## Exercise 61 - Yearly orders
+
+**Question:** How many orders are placed each year?
 
 ### Solution
 ```sql
