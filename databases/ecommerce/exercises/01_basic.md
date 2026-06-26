@@ -827,6 +827,8 @@ GROUP BY YEAR(order_date);
 
 ## Exercise 62 - Total spent
 
+**Question:** How much has each client spent in total?
+
 ### Solution
 ```sql
 SELECT c.name, SUM(p.price * o.quantity)
@@ -840,6 +842,8 @@ GROUP BY c.id;
 
 ## Exercise 63 - Avg order value
 
+**Question:** What is the average order value for each client?
+
 ### Solution
 ```sql
 SELECT c.name, AVG(p.price * o.quantity)
@@ -852,6 +856,8 @@ GROUP BY c.id;
 ---
 
 ## Exercise 64 - Best sellers
+
+**Question:** Which products are the best sellers based on total quantity sold?
 
 ### Solution
 ```sql
