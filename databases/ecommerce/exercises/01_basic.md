@@ -871,6 +871,8 @@ GROUP BY p.id;
 
 ## Exercise 65 - Revenue per product
 
+**Question:** Which products generated the highest total revenue?
+
 ### Solution
 ```sql
 SELECT p.name, SUM(p.price * o.quantity)
@@ -883,6 +885,8 @@ GROUP BY p.id;
 
 ## Exercise 66 - Revenue per category
 
+**Question:** Which product categories generated the highest total revenue?
+
 ### Solution
 ```sql
 SELECT p.category, SUM(p.price * o.quantity)
@@ -894,6 +898,8 @@ GROUP BY p.category;
 ---
 
 ## Exercise 67 - Top 3 clients
+
+**Question:** Which are the top 3 clients based on total revenue generated?
 
 ### Solution
 ```sql
@@ -910,6 +916,8 @@ LIMIT 3;
 
 ## Exercise 68 - Never sold products
 
+**Question:** Which products have never been sold?
+
 ### Solution
 ```sql
 SELECT p.*
@@ -921,6 +929,8 @@ WHERE o.product_id IS NULL;
 ---
 
 ## Exercise 69 - Above avg spend
+
+**Question:** Which clients have spent more than the average client?
 
 ### Solution
 ```sql
@@ -945,6 +955,8 @@ HAVING SUM(p.price * o.quantity) >
 
 ## Exercise 70 - Sales %
 
+**Question:** What percentage of the total quantity sold does each product represent?
+
 ### Solution
 ```sql
 SELECT p.name,
@@ -958,6 +970,8 @@ GROUP BY p.id;
 ---
 
 ## Exercise 71 - Most profitable product
+
+**Question:** Which product generated the highest total revenue?
 
 ### Solution
 ```sql
@@ -973,6 +987,8 @@ LIMIT 1;
 
 ## Exercise 72 - Clients > 3 items
 
+**Question:** Which clients have purchased more than 3 items in total?
+
 ### Solution
 ```sql
 SELECT c.name, SUM(o.quantity)
@@ -985,6 +1001,8 @@ HAVING SUM(o.quantity) > 3;
 ---
 
 ## Exercise 73 - Products multiple orders
+
+**Question:** Which products have been ordered more than once?
 
 ### Solution
 ```sql
